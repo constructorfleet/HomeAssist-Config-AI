@@ -6,7 +6,4 @@ homeassistant:
   time_zone: !secret home_timezone
   name: Communication
 
-http:
-  server_port: !secret ai_server_port
-
 frontend:
