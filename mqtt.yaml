@@ -1,0 +1,21 @@
+broker: automation_mqtt
+port: 1883
+client_id: ai
+birth_message:
+  topic: events/slaves/ai/instance_state
+  qos: 1
+  retain: true
+  payload: >
+    {
+      "event_type": "instance_state.connected",
+      "event_data": "ai"
+    }
+will_message:
+  topic: events/slavrd/ai/instance_state
+  qos: 1
+  retain: true
+  payload: >
+    {
+      "event_type": "instance_state.disconnected",
+      "event_data": "ai"
+    }
